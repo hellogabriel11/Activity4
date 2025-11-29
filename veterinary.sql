@@ -33,6 +33,13 @@ CREATE TABLE doctors (
     phone VARCHAR(15),
     email VARCHAR(100)
 );
+CREATE TABLE invoices (
+    invoiceid INT PRIMARY KEY AUTO_INCREMENT,
+    appointid INT,
+    totalamount NUMERIC(10,2),
+    paymentdate TIME,
+    FOREIGN KEY (appointid) REFERENCES appointments(appointid)
+);
 CREATE TABLE medicalrecords (
     recordid INT PRIMARY KEY,
     animalid INT,
