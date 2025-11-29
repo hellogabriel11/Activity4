@@ -131,3 +131,6 @@ VALUES
 
     UPDATE owners
 SET registereddate = CURDATE();
+
+ALTER TABLE invoices
+RENAME COLUMN paymentdate TO paymenttime;
